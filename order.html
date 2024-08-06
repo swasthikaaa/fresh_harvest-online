@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="./style6.css"> <!-- CSS File -->
+    
+    <!-- Favicon for the website -->
+    <link rel="shortcut icon" type="image/png" href="./Blue and White Circle Retail Logo (2) (1).png"/>
+
+    <!-- Web manifest for Progressive Web App configuration -->
+    <link rel="manifest" href="https://progressier.app/xeAfGpPlAy3xcQCY00q9/progressier.json"/>
+    
+    <!-- Script for Progressive Web App functionality -->
+    <script defer src="https://progressier.app/xeAfGpPlAy3xcQCY00q9/script.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <h1>Order Your Groceries</h1>
+    <header>
+        <!-- Hamburger Menu -->
+        <nav class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-icons">menu</span>
+            </label>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About-us.html">About Us</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./Loyalty-registration.html">Loyalty Registration</a></li>
+            </ul>
+        </nav>
+        <!-- Cart and Favorites Icons -->
+        <div class="icon-container">
+            <span class="material-icons">shopping_cart</span>
+            <span class="material-icons">favorite</span>
+        </div>
+    </header>
+    
+    <form id="groceryForm">
+        <div class="category">
+            <h3>Fruits</h3>
+            <label for="fruitName">Fruit Name:</label>
+            <input type="text" id="fruitName" name="fruitName" required>
+            
+            <label for="fruitQty">Quantity (Kgs):</label>
+            <input type="number" id="fruitQty" name="fruitQty" placeholder="0.0" min="0" step="0.1" required>
+        </div>
+        
+        <div class="category">
+            <h3>Vegetables</h3>
+            <label for="vegetableName">Vegetable Name:</label>
+            <input type="text" id="vegetableName" name="vegetableName" required>
+            
+            <label for="vegetableQty">Quantity (Kgs):</label>
+            <input type="number" id="vegetableQty" name="vegetableQty" placeholder="0.0" min="0" step="0.1" required>
+        </div>
+        
+        <div class="category">
+            <h3>Dairy Produce</h3>
+            <label for="dairyName">Dairy Product Name:</label>
+            <input type="text" id="dairyName" name="dairyName" required>
+            
+            <label for="dairyQty">Quantity:</label>
+            <input type="number" id="dairyQty" name="dairyQty" placeholder="0.0" min="0" step="1" required>
+        </div>
+        
+        <div class="category">
+            <h3>Meat and Seafood</h3>
+            <label for="meatName">Meat/Seafood Name:</label>
+            <input type="text" id="meatName" name="meatName" required>
+            
+            <label for="meatQty">Quantity (Kgs):</label>
+            <input type="number" id="meatQty" name="meatQty" placeholder="0.0" min="0" step="0.1" required>
+        </div>
+        
+        <div class="category">
+            <h3>Baking and Cooking Ingredients</h3>
+            <label for="ingredientName">Ingredient Name:</label>
+            <input type="text" id="ingredientName" name="ingredientName" required>
+            
+            <label for="ingredientQty">Quantity:</label>
+            <input type="number" id="ingredientQty" name="ingredientQty" placeholder="0.0" min="0" step="1" required>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" onclick="addToFavourites()">Add to Favourites</button>
+            <button type="button" onclick="applyFavourites()">Apply Favourites</button>
+        </div>
+        
+        <!-- Table to display items in the cart -->
+        <table id="cart">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td id="totalPrice">Rs.0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <button type="button" onclick="proceedToCheckout()">Buy Now</button>
+    </form>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="./order.js"></script>
+    
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About-us.html">About Us</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./Loyalty-registration.html">Loyalty Registration</a></li>
+            </ul>
+        </div>
+        
+        <div class="social-media">
+            <h3>Social Media</h3>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Phone: 0811234567</p>
+            <p>Email: freshharvest@gmail.com</p>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Fresh Harvest. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
